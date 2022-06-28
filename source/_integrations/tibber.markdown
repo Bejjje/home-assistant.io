@@ -83,4 +83,36 @@ The electricity price can be used to make automations. The sensor has a `max_pri
        message: "The electricity price is now {{ states('sensor.electricity_price_hamretunet_10') }}"
 ```
 
+### Available Sensors
+
+| Sensor |	Description | 
+|--------|--------------|
+ sensor.accumulated_consumption	| kWh consumed since midnight
+ sensor.accumulated_consumption_current_hour	|kWh consumed since since last hour shift
+ sensor.accumulated_cost	|Accumulated cost since midnight; requires active Tibber power deal
+ sensor.accumulated_production	|net kWh produced since midnight
+ sensor.accumulated_production_current_hour	|net kWh produced since last hour shift
+ sensor.average_power	|Average consumption since midnight (Watt)
+ sensor.current_l1	|Current on L1
+ sensor.current_l2	|Current on L2
+ sensor.current_l3	|Current on L3
+ sensor.electricity_price	|The total price (energy + taxes)
+ sensor.estimated_consumption_current_hour	|kWh consumed since since last hour shift
+ sensor.last_meter_consumption	|Last meter active import register state (kWh)
+ sensor.last_meter_production	|Last meter active export register state (kWh)
+ sensor.max_power	|Peak consumption since midnight (Watt)
+ sensor.min_power	|Min consumption since midnight (Watt)
+ sensor.monthly_cost	|The total price (energy + taxes) current month
+ sensor.monthly_net_consumption	|Net consumption since midnight (kWh)
+ sensor.monthly_peak_hour_consumption	|Peak consumption per hour current month (Watt)
+ sensor.power	| Consumption as of now (Watt)
+ sensor.power_factor|Power factor (active power / apparent power) **(uncertain)**
+ sensor.power_production	|Net production (A-) at the moment (Watt)
+ sensor.signal_strength	|Device signal strength (Pulse - dB; Watty - percent)
+ sensor.time_of_max_hour_consumption	|Time of day max power consumption occurred **(uncertain)**
+ sensor.voltage_phase1	|Voltage on phase 1
+ sensor.voltage_phase2	|Voltage on phase 2
+ sensor.voltage_phase3	|Voltage on phase 3
+
+Reference: https://developer.tibber.com/docs/reference
 {% endraw %}
